@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <title>Angular Todo App</title>
   </head>
-  <body>
-
+  <body ng-controller="TodoController as todoVm">
+    <h1>To Do List</h1>
+    <ul>
+      <li>
+        {{todoVm.self}}
+      </li>
+    </ul>
   </body>
 </html>
