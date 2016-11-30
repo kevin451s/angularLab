@@ -4,7 +4,7 @@
     .controller('TodoController', TodoController)
 
   function TodoController() {
-    var self = this;
+    var self = this
     self.add = addTodo
     self.newTodo = {date: '', task: '', done: false}
 
