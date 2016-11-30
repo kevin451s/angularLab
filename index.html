@@ -10,6 +10,18 @@
   </head>
   <body ng-controller="TodoController as todoCtrl">
     <h1>To Do List</h1>
+
+    <form class="form-inline" id='add-todo' ng-submit="todoCtrl.add()">
+			<label class="sr-only" for="todoCtrl.newTodo.date">Date</label>
+			<input class="form-control" type="text" placeholder="The todo is dated ..." ng-model="todoCtrl.newTodo.date "/>
+			<label class="sr-only" for="todoCtrl.newTodo.task">Task</label>
+			<input class="form-control" type="text" placeholder="It is a ..." ng-model="todoCtrl.newTodo.task" />
+			<!-- <label class="sr-only" for="todoCtrl.newTodo.image">Image</label>
+			<input class="form-control" type="text" placeholder="Here's an image (url)..." ng-model="todoCtrl.newTodo.image" /> -->
+			<label class="sr-only" for="todoCtrl.newTodo">Submit</label>
+			<input class="btn btn-default" type="submit"/>
+		</form>
+
     <ul ng-repeat="todo in todoCtrl.all">
       <li>
         <input type="checkbox" ng-model="todo.done" /><span ng-class="{strike:todo.done}"> {{todo.task}}: {{todo.date}} </span>
