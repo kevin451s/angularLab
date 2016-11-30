@@ -3,7 +3,7 @@
   angular.module('angularTodo')
     .controller('TodoController', TodoController)
 
-  function TodoController($scope, $log, $filter) {
+  function TodoController($scope, $log) {
     $scope.add = addTodo
     $scope.newTodo = {date: '', task: '', done: false}
 
